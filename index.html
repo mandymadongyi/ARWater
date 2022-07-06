@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>WebAR</title>
+  <!--AFrame version 1.2.0-->
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <!--AR.js version 3.1.0-->
+    <script src="https://raw.githack.com/AR-js-org/AR.js/3.1.0/aframe/build/aframe-ar.js"></script>
+</head>
+ <body>
+    <a-scene 
+    embedded
+    arjs="debugUIEnabled: false; sourceType: webcam; trackingMethod: best; patternRatio: 0.85"
+    color-space="sRGB"
+    vr-mode-ui="enabled: false"
+    renderer="physicallyCorrectLights: true; colorManagement: true; "
+    >
+
+  <a-entity id='userCamera' camera> </a-entity>
+
+  <a-marker id="marker1" type="pattern" url="./patterns/1.patt">
+    <a-box position='0 0 0' material='color: blue;'></a-box>
+  </a-marker>
+
+  </a-scene>
+</body>
+</html>
